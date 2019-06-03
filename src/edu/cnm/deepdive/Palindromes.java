@@ -13,9 +13,7 @@ public class Palindromes {
   }
 
   public static String fixString(String args) {
-    String lowString = args.toLowerCase();
-    String bestString = lowString.replaceAll("[^a-z0-9]+", "");
-    return bestString;
+    return args.toLowerCase().replaceAll("[^a-z0-9]+", "");
   }
 
   public static void main(String[] args) {
@@ -31,6 +29,5 @@ public class Palindromes {
     } else {
       System.out.println("it is not a palindrome...... better luck next time.");
     }
-
   }
 }
