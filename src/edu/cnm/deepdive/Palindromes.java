@@ -3,6 +3,7 @@ package edu.cnm.deepdive;
 public class Palindromes {
 
   public static boolean isPalindrome(String args) {
+    args = args.toLowerCase().replaceAll("[^a-z0-9]+", "");
     return (args.length() <= 1 ||
         (
             args.charAt(0) == args.charAt(args.length() - 1)
@@ -12,14 +13,9 @@ public class Palindromes {
     );
   }
 
-  public static String fixString(String args) {
-    return args.toLowerCase().replaceAll("[^a-z0-9]+", "");
-  }
-
   public static void main(String[] args) {
 
     String blah = args[0];
-    blah = fixString(blah);
 
     isPalindrome(blah);
     System.out.println("Original String = " + args[0]);

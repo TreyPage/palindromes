@@ -31,7 +31,7 @@ class PalindromesTest {
     assertFalse(actual);
 
     actual = Palindromes.isPalindrome("eve is eve");
-    assertTrue(actual);
+    assertFalse(actual);
 
     actual = Palindromes.isPalindrome("");
     assertTrue(actual);
@@ -47,24 +47,20 @@ class PalindromesTest {
 
     actual = Palindromes.isPalindrome("9070120709");
     assertFalse(actual);
-  }
 
-  @Test
-  void fixString() {
-    String actual;
-    actual = Palindromes.fixString("ERTYHB$%^&");
-    assertEquals("ertyhb", actual);
+    actual = Palindromes.isPalindrome("ERTYHB$%^&");
+    assertFalse(actual);
 
-    actual = Palindromes.fixString("aawsdefrgtyhjuhbgvfcdf");
-    assertEquals("aawsdefrgtyhjuhbgvfcdf", actual);
+    actual = Palindromes.isPalindrome("aawsdefrgtyhjuhbgvfcdf");
+    assertFalse(actual);
 
-    actual = Palindromes.fixString("!@#$%^&");
-    assertEquals("", actual);
+    actual = Palindromes.isPalindrome("!@#$%^&");
+    assertTrue(actual);
 
-    actual = Palindromes.fixString("AZESBHJ");
-    assertEquals("azesbhj", actual);
+    actual = Palindromes.isPalindrome("AZESBHJ");
+    assertFalse(actual);
 
-    actual = Palindromes.fixString("");
-    assertEquals("", actual);
+    actual = Palindromes.isPalindrome("");
+    assertTrue(actual);
   }
 }
