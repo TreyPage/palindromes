@@ -24,6 +24,13 @@ public class Palindromes {
     blah = fixString(blah);
 
     isPalindrome(blah);
-    System.out.println("" + isPalindrome(blah));
+    System.out.println("Original String = " + args[0]);
+    System.out.println("Fixed string = " + blah);
+    if (isPalindrome(blah)) {
+      System.out.println("IT IS A PALINDROME!!");
+    } else {
+      System.out.println("it is not a palindrome...... better luck next time.");
+    }
+
   }
 }
